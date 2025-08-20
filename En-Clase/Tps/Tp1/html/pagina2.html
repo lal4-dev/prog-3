@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro de Reserva</title>
+</head>
+<body>
+    <header>
+        <h1>Compañia Argentina</h1>
+        <h2>Gestión de Vuelos</h2>
+    </header>
+        <nav>
+            <ul>
+                <li> <a href="#">Registrar Usuario </a></li>
+                <li> <a href="#">Consultar vuelos disponibles/reservar </a></li>
+                <li> <a href="#"> Ver reservas realizadas </a></li>
+                <li> <a href="#"> Eliminar reservas</a></li>
+            </ul>
+        </nav>    
+
+    <main>
+        <section>
+            <form action="pagina2.html" method="get">
+                <fieldset>
+                    <legend>Registro de Reserva</legend>
+
+                    <label for="origen">Origen: </label>
+                    <select name="origen" id="origen" disabled>
+                        <option value="1">Cordoba</option>
+                        <option value="2">Mendoza</option>
+                        <option value="3">Tucuman</option>
+                    </select>
+
+                    <br><br>
+                    
+                    <label for="destiono">Destiono: </label>
+                    <select name="destino" id="destino" disabled>
+                        <option value="1">Cordoba</option>
+                        <option value="2">Mendoza</option>
+                        <option value="3">Tucuman</option>
+                    </select>
+                    
+                    <br><br>
+
+                    <label for="fecha-vuelo"> Fecha de vuelo: </label>
+                    <input type="date" name="fecha-vuelo" id="fecha-vuelo" disabled>
+                    
+                    <br><br>
+
+                    <label for="clase">Seleccione una clase: </label>
+                    <select name="clase" id="clase">
+                        <option value="1">Ejecutiva</option>
+                        <option value="2">Economica</option>
+                    </select>
+
+                    <br><br>
+
+                    <label for="cantidad-pasaje">Cantidad de pasajes: </label>
+                    <input type="number" min="1" max="50" required>
+
+                    <br><br>
+
+                    <label for="ubicacion">Selecione ubicacion: </label>
+                    <select name="ubicacion" id="ubicacion">
+                        <option value="1">Ventanilla</option>
+                        <option value="2">Centro</option>
+                        <option value="3">Pasillo </option>
+                    </select>
+                    
+                    <br><br>
+
+                    <label for="numero-silla">Seleccione el numero de silla: </label>
+                    <input type="number" min="1" max="50" name="numero-silla" id="numero-silla">
+
+                    <br><br>
+
+                    <label for="apellido-nombre">Ingrese su apellido y nombre: </label>
+                    <input type="text" name="apellido-nombre" id="apellido-nombre" maxlength="100" required> 
+
+                    <br><br>
+
+                    <label for="dni">Ingrese su DNI</label>
+                    <input type="number" name="dni" id="dni" max="8" required>
+
+                    <br><br>
+
+                    <label for="fecha-nacimiento">Ingrese su fecha-nacimiento: </label>
+                    <input type="date" name="fecha-nacimiento" id="fecha-nacimiento">
+
+                    <br><br>
+
+                    <label for="sexo">Seleccione su sexo: </label> <br>
+                    <input type="radio" name="radio-m" id="radio-m"> M <br>
+                    <input type="radio" name="radio-f" id="radio-f"> F 
+                    
+                    <br><br>
+
+                    <button type="submit">Aceptar</button>
+                    <button type="reset">Cancelar</button>
+                    
+            </form>
+        </section>
+    </main>
+
+    </footer>
+        <p>
+            &copy; Sitio Oficial de Compañia Argentina-2025
+        </p>
+    </footer>
+</body>
+</html>
