@@ -20,7 +20,7 @@
         </nav>    
 
     <main>
-        <section>
+        <div>
             <form action="pagina2.html" method="get">
                 <fieldset>
                     <legend>Registro de Reserva</legend>
@@ -34,7 +34,7 @@
 
                     <br><br>
                     
-                    <label for="destiono">Destiono: </label>
+                    <label for="destino">Destino: </label>
                     <select name="destino" id="destino" disabled>
                         <option value="1">Cordoba</option>
                         <option value="2">Mendoza</option>
@@ -43,9 +43,14 @@
                     
                     <br><br>
 
-                    <label for="fecha-vuelo"> Fecha de vuelo: </label>
+                    <label for="fecha-vuelo"> Fecha del vuelo: </label>
                     <input type="date" name="fecha-vuelo" id="fecha-vuelo" disabled>
                     
+                    <br><br>
+                    
+                    <label for="hora-vuelo"> Hora del vuelo: </label>
+                    <input type="time" name="hora-vuelo" id="hora-vuelo" disabled> 
+
                     <br><br>
 
                     <label for="clase">Seleccione una clase: </label>
@@ -57,7 +62,7 @@
                     <br><br>
 
                     <label for="cantidad-pasaje">Cantidad de pasajes: </label>
-                    <input type="number" min="1" max="50" required>
+                    <input type="number" name="cantidad-pasaje" id="cantidad-pasaje" min="1" max="50" required>
 
                     <br><br>
 
@@ -90,20 +95,25 @@
 
                     <br><br>
 
-                    <label for="sexo">Seleccione su sexo: </label> <br>
-                    <input type="radio" name="radio-m" id="radio-m"> M <br>
-                    <input type="radio" name="radio-f" id="radio-f"> F 
+                    <label>Seleccione su sexo: </label> <br>
+
+                    <input type="radio" name="sexo" id="sexo-m" value="M"> 
+                    <label for="sexo-m">M</label><br>
+                    
+                    <input type="radio" name="sexo" id="sexo-f" value="F"> 
+                    <label for="sexo-f">F</label>
                     
                     <br><br>
 
                     <button type="submit">Aceptar</button>
                     <button type="reset">Cancelar</button>
-                    
+
+                </fieldset>
             </form>
-        </section>
+        </div>
     </main>
 
-    </footer>
+    <footer>
         <p>
             &copy; Sitio Oficial de Compañia Argentina-2025
         </p>
