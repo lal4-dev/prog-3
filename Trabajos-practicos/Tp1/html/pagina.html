@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="alejo leonel maidana-Mu:01713, initial-scale=1.0">
+    <title>Gestion de Vuelos</title>
+</head>
+<body>
+    <header>
+        <h1>Compañia Argentina</h1>
+        <h2>Gestión de Vuelos</h2>
+    </header>
+        <nav>
+            <ul>
+                <li> <a href="#">Registrar Usuario </a></li>
+                <li> <a href="#">Consultar vuelos disponibles/reservar </a></li>
+                <li> <a href="#"> Ver reservas realizadas </a></li>
+                <li> <a href="#"> Eliminar reservas</a></li>
+            </ul>
+        </nav>    
+    
+    <main>
+        <div>
+            <form action="pagina2.html" method="get">
+                <fieldset>
+                    <legend>Vuelos Disponibles</legend>
+
+                    <label for="origen">Origen: </label>
+                    <select name="origen" id="origen">
+                        <option value="1">Cordoba</option>
+                        <option value="2">Mendoza</option>
+                        <option value="3">Tucuman</option>
+                    </select>
+
+                <br><br>
+                
+                <label for="destino">Destino: </label>
+                <select name="destino" id="destino">
+                    <option value="1">Cordoba</option>
+                    <option value="2">Mendoza</option>
+                    <option value="3">Tucuman</option>
+                </select>
+                
+                <br><br>
+
+                <label for="fecha-vuelo"> Fecha de vuelo: </label>
+                <input type="date" name="fecha-vuelo" id="fecha-vuelo">
+                
+                <br><br>
+
+                <button type="submit" name="boton-buscar" id="boton-buscar"> Buscar</button>
+                <button type="reset" name="boton-cancelar" id="boton-cancelar"> Cancelar</button>
+
+                </fieldset>
+            </form>
+        </div>
+    </main>
+        
+    <footer>
+        <p>
+            &copy; Sitio Oficial de Compañia Argentina-2025
+        </p>
+    </footer>
+</body>
+</html>
