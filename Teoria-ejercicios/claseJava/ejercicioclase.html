@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Recetario</title>
+</head>
+<body>
+
+    <ul id="lista">
+        
+    </ul>
+
+  <script>
+    const recetaMate = {
+      titulo: "Mate",
+      categoria: "Bebida",
+      tiempo: 5
+    };
+
+    class Recetario {
+      constructor() {
+        this.recetas = [];
+      }
+
+      agregarReceta(receta) {
+        this.recetas.push(receta);
+      }
+
+    }
+
+    const miRecetario = new Recetario();
+    miRecetario.agregarReceta(recetaMate);
+    miRecetario.agregarReceta({ titulo: "Milanesa con puré", categoria: "Principal", tiempo: 40 });
+    miRecetario.agregarReceta({ titulo: "Picada", categoria: "Entrada", tiempo: 15 });
+
+    const lista = document.getElementById('lista')
+    
+    //console.log("Listado completo de recetas:");
+    for (let receta of miRecetario.recetas) {
+        const elemento = document.createElement('li')
+        elemento.textContent = receta.titulo
+        
+        lista.appendChild(elemento)
+
+      console.log(`${receta.titulo} (${receta.categoria}) - ${receta.tiempo} min`);
+    }
+
+
+  </script>
+</body>
+</html>

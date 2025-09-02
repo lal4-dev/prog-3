@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document-3</title>
+</head>
+<body>
+    <h2>funciones</h2>
+
+    <script>
+
+        //funciones declarativas
+        function calcularPromedio(numeros){
+            let suma = 0;
+            for(let n of numeros){
+                suma= suma + n;
+            }
+
+            return suma/numeros.length;
+        }
+
+        let notas = [10,5,7,8]
+        let promedio = calcularPromedio(notas)
+
+        console.log(`Las notas son ${notas}`)
+        console.log(`El promedio de notas es ${promedio}`)
+
+
+
+        //funciones como expresion
+        const filtrarnumeros = function(...numeros){
+            console.log(`Los parametros recibidos: ${numeros}`);
+            let impares = []
+            numeros.forEach (elemento =>{
+                if(elemento % 2 !== 0){
+                    impares.push(elemento)
+                }
+            });
+
+            return impares
+        }
+        console.log(`Resultados de la funcion expresion`);
+        console.log(`Resultado 1: ${filtrarnumeros(3,6,8,9)} `);
+        console.log(`Resultado 2: ${filtrarnumeros(4,7,2,1)} `);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>object</h1>
+
+    <script>
+        //objeto
+        const libro={
+            titulo: "Ciena años",
+            autor: "Marquez",
+            paginas: 471
+        }
+
+        //clase
+        class biblioteca{
+            constructor(){
+                this.catalogo = [];
+            }
+
+            agregarlibros(libro){
+                this.catalogo.push(libro);
+            }
+            
+            buscarlibrospaginas(minPaginas){
+                let encontrados = [];
+
+                for(let libro of this.catalogo){
+                    if(libro.paginas >= minPaginas){
+                        encontrados.push(libro.titulo);
+                    }
+                }
+                
+                return encontrados;
+            }
+        }
+
+        let mibiblioteca = new biblioteca();
+        mibiblioteca.agregarlibros(libro);
+        mibiblioteca.agregarlibros({titulo: "El principito", autor:"saint", paginas:95});
+        console.log(`El libros  con al menos 90 paginas: ${mibiblioteca.buscarlibrospaginas(90)}`);
+    </script>
+</body>
+</html>
