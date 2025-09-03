@@ -18,7 +18,7 @@
             <nav>
             <ul>
                 <li> <a href="#">Registrar Usuario </a></li>
-                <li> <a href="pagina2.html">Consultar vuelos disponibles/reservar </a></li>
+                <li> <a href="pagina.html">Consultar vuelos disponibles/reservar </a></li>
                 <li> <a href="#"> Ver reservas realizadas </a></li>
                 <li> <a href="#"> Eliminar reservas</a></li>
             </ul>
@@ -28,10 +28,13 @@
             
     
     <main>
-        <div>
+        <div id="formularioVuelos" class="mainheight">
             <form action="pagina2.html" method="get">
                 <fieldset>
-                    <legend>Vuelos Disponibles</legend>
+
+                    <p>
+                        Vuelos Disponibles
+                    </p>
 
                     <label for="origen">Origen: </label>
                     <select name="origen" id="origen">
@@ -55,10 +58,10 @@
                 <input type="date" name="fecha-vuelo" id="fecha-vuelo">
                 
                 <br><br>
-
-                <button type="submit" name="boton-buscar" id="boton-buscar"> Buscar</button>
-                <button type="reset" name="boton-cancelar" id="boton-cancelar"> Cancelar</button>
-
+                <div id="botones-formularios">
+                    <button type="submit" name="boton-buscar" id="boton-buscar"> Buscar</button>
+                    <button type="reset" name="boton-cancelar" id="boton-cancelar"> Cancelar</button>
+                </div>
                 </fieldset>
             </form>
         </div>

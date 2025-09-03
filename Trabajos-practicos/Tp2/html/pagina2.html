@@ -4,27 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Registro de Reserva</title>
+    <link rel="stylesheet" href="../static/css/pagina1.css">
+
 </head>
 <body>
     <header>
-        <h1>Compañia Argentina</h1>
-        <h2>Gestión de Vuelos</h2>
-    </header>
-        <nav>
+        <div id="headerArriba">
+            <h1>Compañia Argentina</h1>
+            <h2>Gestión de Vuelos</h2>
+        </div>
+        
+        <div id="headerAbajo">
+            <nav>
             <ul>
                 <li> <a href="#">Registrar Usuario </a></li>
-                <li> <a href="#">Consultar vuelos disponibles/reservar </a></li>
+                <li> <a href="pagina.html">Consultar vuelos disponibles/reservar </a></li>
                 <li> <a href="#"> Ver reservas realizadas </a></li>
                 <li> <a href="#"> Eliminar reservas</a></li>
             </ul>
-        </nav>    
+        </nav>
+        </div>
+    </header>
+    
 
     <main>
-        <div>
+        <div id="formularioVuelos">
             <form action="pagina2.html" method="get">
                 <fieldset>
-                    <legend>Registro de Reserva</legend>
-
+                    <p>
+                        Registro de Reserva                    
+                    </p>
+            
                     <label for="origen">Origen: </label>
                     <select name="origen" id="origen" disabled>
                         <option value="1">Cordoba</option>
@@ -105,9 +115,10 @@
                     
                     <br><br>
 
-                    <button type="submit">Aceptar</button>
-                    <button type="reset">Cancelar</button>
-
+                    <div id="botones-formularios">
+                        <button type="submit" name="boton-buscar" id="boton-buscar"> Buscar</button>
+                        <button type="reset" name="boton-cancelar" id="boton-cancelar"> Cancelar</button>
+                    </div>
                 </fieldset>
             </form>
         </div>
