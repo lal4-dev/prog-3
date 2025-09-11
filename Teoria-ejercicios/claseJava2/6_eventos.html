@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evento</title>
+
+    <script>
+        function cambiar_titulo(boton){
+            const encabezado = document.querySelector('h1');
+            encabezado.innerText = 'yangora';
+
+            boton.disabled = true;
+        }
+
+
+    </script>
+</head>
+<body onload="alert('La pagina se a cargado');">
+    <h1 >hola mundo enventos </h1>
+    <button onclick="cambiar_titulo(this);">Click Aqui</button>
+</body>
+</html>
