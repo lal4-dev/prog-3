@@ -28,3 +28,28 @@ document.getElementById("form-vuelo").addEventListener("submit",function(envioda
         mensaje.style.color = "red";
     }
 })
+
+
+
+//origen y destino no iguales------------------------------------------------------------------
+
+const origenVuelo =document.getElementById("origen");
+const destinoVuelo =document.getElementById("destino");
+
+origenVuelo.addEventListener('change',()=> {
+    
+    const valorOrigen = origenVuelo.value;
+
+    Array.from(destinoVuelo.options).forEach(opciones =>{
+        if(opciones.value === valorOrigen){
+            opciones.disabled = true;
+            opciones.style.color ="red";
+
+        }
+        else{
+            opciones.disabled = false;
+            opciones.style.color="green";
+        }
+    })
+    
+})
