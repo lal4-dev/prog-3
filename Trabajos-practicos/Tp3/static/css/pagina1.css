@@ -18,9 +18,10 @@ header{
 nav ul{
     display: flex;
     list-style: none;
-    gap:10px;
+    gap:30px;
     padding: 10px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 
