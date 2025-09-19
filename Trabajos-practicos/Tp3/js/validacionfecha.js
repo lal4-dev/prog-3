@@ -9,7 +9,7 @@ function validarfecha(fechaingresada){
     return true
 }
 
-document.getElementById("form-vuelo").addEventListener("submit",function(enviodatos){
+document.getElementById("form-vuelo").addEventListener("submit",(enviodatos)=>{
 
     const fechaingresada = document.getElementById("fecha-vuelo").value;
     const resultado = validarfecha(fechaingresada);
