@@ -7,7 +7,7 @@ class Estudiante(models.Model):
     apellido_estudiante = models.TextField(max_length=250, unique=True);
     edad_estudiante = models.IntegerField(unique=True);
     nota_curso_estudiante = models.IntegerField(blank=True);
-    curso_estudiante = models.TextField(blank=True);
+    curso_estudiante = models.TextField(max_length=250, blank=True);
 
     def __str__(self):
         return f'nombre:{self.nombre_estudiante}, apellido:{self.apellido_estudiante}, edad: {self.edad_estudiante}, nota: {self.nota_curso_estudiante}, curso: {self.curso_estudiante}';
