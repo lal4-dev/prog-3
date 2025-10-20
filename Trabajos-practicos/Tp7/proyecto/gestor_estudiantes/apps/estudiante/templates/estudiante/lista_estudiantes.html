@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Estudiantes</title>
+</head>
+<body>
+    <h1>Estudiantes Registrados</h1>
+    <table border="1" cellpadding="5">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Nota</th>
+                <th>Cursos</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for estudiante in estudiantes %}
+            <tr>
+                <td>{{ estudiante.nombre_estudiante }}</td>
+                <td>{{ estudiante.apellido_estudiante }}</td>
+                <td>{{ estudiante.edad_estudiante }}</td>
+                <td>{{ estudiante.nota_curso_estudiante }}</td>
+                <td>
+                    {% for curso in estudiante.cursos.all %}
+                        {{ curso.nombre_curso }}{% if not forloop.last %}, {% endif %}
+                    {% empty %}
+                        Sin cursos
+                    {% endfor %}
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5">No hay estudiantes registrados.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

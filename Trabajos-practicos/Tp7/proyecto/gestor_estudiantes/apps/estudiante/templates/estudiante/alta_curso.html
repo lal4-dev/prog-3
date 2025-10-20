@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Curso</title>
+</head>
+<body>
+    <h2>Registrar un nuevo curso</h2>
+
+    {% if mensaje %}
+        <p style="color: green;">{{ mensaje }}</p>
+    {% endif %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+
+    <br>
+    <a href="{% url 'estudiante:listar_cursos' %}">Ver cursos cargados</a>
+</body>
+</html>
