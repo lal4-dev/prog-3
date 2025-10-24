@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Datoa Cursos</title>
+</head>
+<body>
+    <h1>Estudiantes Registrados</h1>
+    <table border="1" cellpadding="5">
+        <thead>
+            <tr>
+                <th>Curso</th>
+                <th>Horas</th>
+                <th>Inscriptos</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for curso in cursos %}
+            <tr>
+                <td>{{ curso.nombre_curso }}</td>
+                <td>{{ curso.cantidad_horas_curso}}</td>
+                <td>
+                    <ul>
+                        {% for estudiante in curso.estudiantes.all %}
+                            <li>{{ estudiante.nombre_estudiante }} {{ estudiante.apellido_estudiante }} </li> {% if not forloop.last %}, {% endif %}
+                        {% empty %}
+                            Sin Estudiantes
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5">No hay cursos registrados.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
